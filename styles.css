@@ -1,0 +1,49 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Color de fondo claro */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Interlineado */
+}
+
+/* Estilo del encabezado */
+.header-section {
+    background-color: #007acc; /* Azul oscuro */
+    color: white; /* Color del texto */
+    padding: 20px;
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo de la sección de contenido */
+.content-section {
+    background-color: #e6f7ff; /* Azul claro */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px; /* Margen alrededor de la sección */
+}
+
+/* Estilo del índice flotante */
+.toc {
+    background: #fff; /* Color de fondo del índice */
+    padding: 10px; /* Espaciado */
+    border: 1px solid #ccc; /* Borde */
+    margin-bottom: 20px; /* Espaciado inferior */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo de los títulos */
+h1, h2 {
+    font-weight: bold; /* Títulos en negrita */
+    margin: 10px 0; /* Margen */
+}
+
+h2 {
+    border-bottom: 2px solid #007acc; /* Línea inferior azul */
+    padding-bottom: 5px; /* Espaciado inferior */
+}
+
+/* Enlaces del índice */
+.toc a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007acc; /* Color azu
+

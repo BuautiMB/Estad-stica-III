@@ -1,0 +1,67 @@
+---
+output: 
+  html_document:
+    toc: true # Activa el índice
+    toc_float: true # Muestra el índice flotante
+    css: styles.css
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+<div class="header-section">
+  <h1>Demostraciones Estadística III</h1>
+  <p>Bautista Martina Baldi - bautista.martina.baldi\@mi.unc.edu.ar</p>
+  <p>2024-10</p>
+</div>
+
+
+# Introducción
+
+A continuación se enuncian las demostraciones más probables para el final de la materia Estadística III de la FCE-UNC.
+
+## Índice
+
+- [Demostración 1](#demostración-1)  <!-- Enlace a la sección -->
+- [Demostración 2](#demostración-2) 
+
+## Demostración 1 {#demostración-1} 
+
+Sea \(X\) una variable definida sobre un espacio de probabilidad \((\Omega; F; P)\). Demostrar que la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+
+En primera instancia se define el significado de probabilidad inducida por \(X\). La probabilidad inducida por \(X\) sobre un conjunto \(B\) es \(P_{X}(B) = P(X^{-1}(B))\), donde \(X^{-1}(B)\) es el conjunto de todos los elementos de \(\Omega\) que son mapeados en \(B\) (por \(X\) en \(B\)).
+
+Consideremos una secuencia de conjuntos \(B_{1}, B_{2}, \ldots \in F\).
+
+Se quiere demostrar que 
+
+$$
+P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = \sum_{i=1}^{\infty} P_{X}(B_{i}).
+$$
+
+Utilizando la definición de probabilidad inducida por \(X\), se tiene que 
+
+$$
+P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right).
+$$
+
+Como los conjuntos \(B_{i}\) son disjuntos, entonces los conjuntos \(X^{-1}(B_{i})\) también lo son, porque \(X\) es una función. Entonces: 
+
+$$
+X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = \bigcup_{i=1}^{\infty} X^{-1}(B_{i}).
+$$
+
+Luego, haciendo uso de la propiedad de \(\sigma\)-aditividad de la medida de probabilidad \(P\), se tiene que: 
+
+$$
+P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right) = P\left(\bigcup_{i=1}^{\infty} X^{-1}(B_{i})\right) = \sum_{i=1}^{\infty} P(X^{-1}(B_{i})).
+$$
+
+Por lo tanto, la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+
+## Demostración 2 {#demostración-2}
+
+
