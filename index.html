@@ -28,49 +28,303 @@
                 <li><a href="#demostracion1">Demostración 1</a></li>
                 <li><a href="#demostracion2">Demostración 2</a></li>
                 <li><a href="#demostracion3">Demostración 3</a></li>
+                <li><a href="#demostracion4">Demostración 4</a></li>
+                <li><a href="#demostracion5">Demostración 5</a></li>
+                <li><a href="#elementosimportantes">Elementos Importantes</a></li>
             </ul>
         </div>
 
         <h2 id="demostracion1">Demostración 1</h2>
         <p>
-            Sea \(X\) una variable definida sobre un espacio de probabilidad \((\Omega; F; P)\). Demostrar que la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
-        </p>
-        <p>
-            En primera instancia se define el significado de probabilidad inducida por \(X\). La probabilidad inducida por \(X\) sobre un conjunto \(B\) es \(P_{X}(B) = P(X^{-1}(B))\), donde \(X^{-1}(B)\) es el conjunto de todos los elementos de \(\Omega\) que son mapeados en \(B\) por \(X\).
-        </p>
-        <p>
-            Se quiere demostrar que \(P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = \sum_{i=1}^{\infty} P_{X}(B_{i})\).
-            Utilizando la definición de probabilidad inducida por \(X\), se tiene que 
-            \(P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right)\).
-            Como los conjuntos \(B_{i}\) son disjuntos, entonces los conjuntos \(X^{-1}(B_{i})\) también lo son, porque \(X\) es una función.
-        </p>
-        <p>
-            Utilizando la propiedad de \(\sigma\)-aditividad de la medida de probabilidad \(P\), se concluye que
-            \(P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right) = \sum_{i=1}^{\infty} P(X^{-1}(B_{i}))\).
-            Por lo tanto, la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
-        </p>
+        Sea \(X\) una variable definida sobre un espacio de probabilidad \((\Omega, F, P)\). 
+        Demostrar que la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+    </p>
+    <p>
+        En primera instancia se define el significado de probabilidad inducida por \(X\). 
+        La probabilidad inducida por \(X\) sobre un conjunto \(B\) es \(P_{X}(B) = P(X^{-1}(B))\), 
+        donde \(X^{-1}(B)\) es el conjunto de todos los elementos de \(\Omega\) que son mapeados en \(B\) (por \(X\) en \(B\)).
+    </p>
+    <p>
+        Consideremos una secuencia de conjuntos \(B_{1}, B_{2}, \ldots \in F\).
+    </p>
+    <p>
+        Se quiere demostrar que \(P_{X}(\bigcup_{i=1}^{\infty} B_{i}) = \sum_{i=1}^{\infty} P_{X}(B_{i})\).
+    </p>
+    <p>
+        Utilizando la definición de probabilidad inducida por \(X\), se tiene que:
+    </p>
+    <p>
+        \[
+        P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right).
+        \]
+    </p>
+    <p>
+        Como los conjuntos \(B_{i}\) son disjuntos, entonces los conjuntos \(X^{-1}(B_{i})\) también lo son, porque \(X\) es una función. 
+        Entonces:
+    </p>
+    <p>
+        \[
+        X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = \bigcup_{i=1}^{\infty} X^{-1}(B_{i}).
+        \]
+    </p>
+    <p>
+        Luego, haciendo uso de la propiedad de \(\sigma\)-aditividad de la medida de probabilidad \(P\), se tiene que:
+    </p>
+    <p>
+        \[
+        P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right) = P\left(\bigcup_{i=1}^{\infty} X^{-1}(B_{i})\right) = \sum_{i=1}^{\infty} P(X^{-1}(B_{i})).
+        \]
+    </p>
+    <p>
+        Por lo tanto, la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+    </p>
 
         <h2 id="demostracion2">Demostración 2</h2>
         <p>
-            Demostrar que la preimagen de los hiperrectángulos pertenece a \(F\).
-        </p>
-        <p>
-            Se definen los hiperrectángulos de dimensión k como el producto cartesiano finito de los intervalos de la forma \( (-\infty, X_k] \). La preimagen de un hiperrectángulo bajo la función \(X\) es el conjunto de todos los elementos de \(\Omega\) tales que \(X(\omega)\) está en el hiperrectángulo.
-        </p>
-        <p>
-            Como cada conjunto de la forma \( [X_i \leq x_i] \in F \) (porque \(X_i\) es una variable aleatoria), la preimagen del hiperrectángulo es una intersección finita de conjuntos medibles, lo que prueba que la preimagen pertenece a \(F\).
-        </p>
-
+        Demostrar que la preimagen de los hiperrectángulos pertenecen a \(F\).
+    </p>
+    <p>
+        En primera instancia se definen los hiperrectángulos de dimensión \(k\) como el producto cartesiano finito de los intervalos de la forma \((-\infty, X_{k}]\):
+    </p>
+    <p>
+        \[
+        X^{-1}\left((-\infty, X_{1}] \times (-\infty, X_{2}] \times \dots \times (-\infty, X_{k}]\right) \in F
+        \]
+    </p>
+    <p>
+        \[
+        X^{-1}\left(\times_{i=1}^{k} (-\infty, X_{i}]\right) \in F \quad \forall (X_{1}, \dots, X_{k})
+        \]
+    </p>
+    <p>
+        \[
+        \updownarrow
+        \]
+    </p>
+    <p>
+        \[
+        [X \in \times_{i=1}^{k}(-\infty, X_{i}]]
+        \]
+    </p>
+    <p>
+        \[
+        \updownarrow
+        \]
+    </p>
+    <p>
+        \[
+        [X_{1} \leq x_{1}, X_{2} \leq x_{2}, \dots, X_{k} \leq x_{k}] = \{\omega \in \Omega : X_{1}(\omega) \leq x_{1}, \dots, X_{k}(\omega) \leq x_{k}\}
+        \]
+    </p>
+    <p>
+        De esta manera, se satisfacen \(k\) restricciones:
+    </p>
+    <p>
+        \[
+        \bigcap_{i=1}^{k} \{\omega \in \Omega : X_{i}(\omega) \leq x_{i}\}
+        \]
+    </p>
+    <p>
+        \[
+        = \bigcap_{i=1}^{k} [X_{i} \leq x_{i}]
+        \]
+    </p>
+    <p>
+        Dado que \([X_{i} \leq x_{i}] \in F\), porque cada \(X_{i}\) es una variable aleatoria, podemos concluir que:
+    </p>
+    <p>
+        \[
+        \bigcap_{i=1}^{k} [X_{i} \leq x_{i}] \in F
+        \]
+    </p>
+    <p>
+        Esto es lo que se quería demostrar.
+    </p>
         <h2 id="demostracion3">Demostración 3</h2>
         <p>
-            Sea \(\{A_{n}\}_{n \geq 1}\) una sucesión de eventos tal que: \(A_1 \subset A_2 \subset \dots \subset A_n\) y \(A = \bigcup_{n=1}^{\infty} A_{n}\).
-            Demostrar que: \(\lim_{n \to \infty} P(A_{n}) = P(A)\), es decir, la continuidad de la probabilidad en sucesiones monótonas expansivas.
-        </p>
-        <p>
-            Por la propiedad de continuidad monótona de la medida de probabilidad, se tiene que para una sucesión creciente de eventos \(A_n\), 
-            \(P\left( \bigcup_{n=1}^{\infty} A_n \right) = \lim_{n \to \infty} P(A_n)\). 
-            Esto prueba la continuidad de la probabilidad.
-        </p>
+        Se demostrará que 
+        \[
+        P\left(\bigcup_{i=1}^{n} A_{i}\right) \leq \sum_{i=1}^{n} P(A_{i}).
+        \]
+    </p>
+    <p>
+        Sea \(A_{i}\) un conjunto que pertenece a \(F\). Se usará inducción para demostrar que 
+        \[
+        P\left(\bigcup_{i=1}^{n} A_{i}\right) \leq \sum_{i=1}^{n} P(A_{i}).
+        \]
+    </p>
+    <h2>1) Caso base: n = 2</h2>
+    <p>
+        Comencemos con \(n=2\), el menor número de conjuntos que se pueden unir:
+        \[
+        P(A_{1} \cup A_{2}) \leq P(A_{1}) + P(A_{2}).
+        \]
+    </p>
+    <p>
+        Sabemos que \(A_{1} \cup A_{2} = (A_{1} - A_{2}) \cup (A_{1} \cap A_{2}) \cup (A_{2} - A_{1})\). 
+        Como la unión es disjunta, y por el axioma 3 de la medida de probabilidad, podemos tomar la probabilidad de ambos lados:
+        \[
+        P(A_{1} \cup A_{2}) = P(A_{1} - A_{2}) + P(A_{1} \cap A_{2}) + P(A_{2} - A_{1}).
+        \]
+    </p>
+    <p>
+        Además, sabemos que \(A_{1} - A_{2} = A_{1} - (A_{1} \cap A_{2})\) y \(A_{2} - A_{1} = A_{2} - (A_{1} \cap A_{2})\), por lo tanto:
+        \[
+        P(A_{1} \cup A_{2}) = P[A_{1} - (A_{1} \cap A_{2})] + P(A_{1} \cap A_{2}) + P[A_{2} - (A_{1} \cap A_{2})].
+        \]
+    </p>
+    <p>
+        Como la intersección está contenida en ambos conjuntos, la probabilidad de la diferencia es igual a la diferencia de las probabilidades, de modo que:
+        \[
+        P(A_{1} \cup A_{2}) = P(A_{1}) - P(A_{1} \cap A_{2}) + P(A_{1} \cap A_{2}) + P(A_{2}) - P(A_{1} \cap A_{2}),
+        \]
+        lo que simplifica a:
+        \[
+        P(A_{1} \cup A_{2}) = P(A_{1}) + P(A_{2}) - P(A_{1} \cap A_{2}).
+        \]
+        Por lo tanto, 
+        \[
+        P(A_{1} \cup A_{2}) \leq P(A_{1}) + P(A_{2}),
+        \]
+        completando el caso base.
+    </p>
+    <h2>2) Caso inductivo</h2>
+    <p>
+        Supongamos que la propiedad se cumple para \(n = k\), es decir:
+        \[
+        P\left(\bigcup_{i=1}^{k} A_{i}\right) \leq \sum_{i=1}^{k} P(A_{i}).
+        \]
+    </p>
+    <p>
+        Queremos demostrar que también se cumple para \(n = k+1\). Entonces:
+        \[
+        P\left(\bigcup_{i=1}^{k+1} A_{i}\right) = P\left(\left(\bigcup_{i=1}^{k} A_{i}\right) \cup A_{k+1}\right).
+        \]
+    </p>
+    <p>
+        Por el caso base (con \(n=2\)), sabemos que:
+        \[
+        P\left(\left(\bigcup_{i=1}^{k} A_{i}\right) \cup A_{k+1}\right) \leq P\left(\bigcup_{i=1}^{k} A_{i}\right) + P(A_{k+1}),
+        \]
+        y aplicando la hipótesis inductiva:
+        \[
+        P\left(\bigcup_{i=1}^{k+1} A_{i}\right) \leq \sum_{i=1}^{k} P(A_{i}) + P(A_{k+1}) = \sum_{i=1}^{k+1} P(A_{i}).
+        \]
+    </p>
+    <p>
+        De esta forma, se ha demostrado que:
+        \[
+        P\left(\bigcup_{i=1}^{k+1} A_{i}\right) \leq \sum_{i=1}^{k+1} P(A_{i}),
+        \]
+        completando la demostración por inducción.
+    </p>
+        <h2 id="demostracion4">Demostración 4</h2>
+   </p>Teorema de la Probabilidad Compuesta</p>
+
+    <p>Sea \((\Omega, F, P)\) un espacio de probabilidad. El teorema de la probabilidad compuesta establece:</p>
+
+    <h2>i) Para dos conjuntos \(A\) y \(B\) en \(F\):</h2>
+    <p>
+        \[
+        P(A \cap B) = P(A) \cdot P(B|A) = P(B) \cdot P(A|B) \quad \forall A, B \in F
+        \]
+    </p>
+
+    <h2>ii) Para una secuencia de conjuntos \(A_1, A_2, \dots, A_n \in F\):</h2>
+    <p>
+        \[
+        P\left( \bigcap_{i=1}^{n} A_i \right) = \prod_{i=1}^{n} P\left( A_i \middle| \bigcap_{k=1}^{i-1} A_k \right)
+        \quad \forall A_1, A_2, \dots, A_n \in F
+        \]
+    </p>
+
+    <h2>Demostración por inducción</h2>
+
+    <h3>1) Caso base: \(n = 2\)</h3>
+    <p>
+        El menor número de conjuntos que se pueden intersectar es 2. Sea \(A = A_1\) y \(B = A_2\), entonces tenemos que:
+        \[
+        P(A \cap B) = P(A) \cdot P(B|A)
+        \]
+        lo que es equivalente a:
+        \[
+        P(A_1 \cap A_2) = P(A_1) \cdot P(A_2 | A_1).
+        \]
+    </p>
+
+    <h3>2) Caso inductivo: \(n = k+1\)</h3>
+
+    <p>
+        \textbf{Hipótesis inductiva (HI):} Supongamos que se cumple para \(n = k\):
+        \[
+        P\left( \bigcap_{i=1}^{k} A_i \right) = \prod_{i=1}^{k} P\left( A_i \middle| \bigcap_{j=1}^{i-1} A_j \right).
+        \]
+    </p>
+
+    <p>
+        \textbf{Tesis inductiva (TI):} Queremos demostrar que se cumple para \(n = k+1\):
+        \[
+        P\left( \bigcap_{i=1}^{k+1} A_i \right) = \prod_{i=1}^{k+1} P\left( A_i \middle| \bigcap_{j=1}^{i-1} A_j \right).
+        \]
+    </p>
+
+    <p>
+        Partimos de la intersección de \(k+1\) conjuntos:
+        \[
+        P\left( \bigcap_{i=1}^{k+1} A_i \right) = P\left( \left( \bigcap_{i=1}^{k} A_i \right) \cap A_{k+1} \right).
+        \]
+    </p>
+
+    <p>
+        Por el caso base, sabemos que:
+        \[
+        P\left( \left( \bigcap_{i=1}^{k} A_i \right) \cap A_{k+1} \right) = P\left( \bigcap_{i=1}^{k} A_i \right) \cdot P\left( A_{k+1} \middle| \bigcap_{i=1}^{k} A_i \right).
+        \]
+    </p>
+
+    <p>
+        Usando la hipótesis inductiva (HI), podemos sustituir \(P\left( \bigcap_{i=1}^{k} A_i \right)\):
+        \[
+        P\left( \bigcap_{i=1}^{k+1} A_i \right) = \left( \prod_{i=1}^{k} P\left( A_i \middle| \bigcap_{j=1}^{i-1} A_j \right) \right) \cdot P\left( A_{k+1} \middle| \bigcap_{i=1}^{k} A_i \right).
+        \]
+    </p>
+
+    <p>
+        Finalmente, esto es equivalente a:
+        \[
+        P\left( \bigcap_{i=1}^{k+1} A_i \right) = \prod_{i=1}^{k+1} P\left( A_i \middle| \bigcap_{j=1}^{i-1} A_j \right),
+        \]
+        lo que completa la demostración por inducción.
+    </p>
+        <h2 id="demostracion5">Demostración 5</h2>
+        <p>Se quiere demostrar que si \(A_{n} \downarrow A\), entonces \(P(A_{n}) \downarrow P(A)\).</p>
+
+    <p>Demostrar Continuidad de la Probabilidad para Sucesiones Monótonas. Sea \(\{A_{n}\}_{n\in \mathbb{N}}\) una sucesión monótona decreciente tal que \(A_{n} \downarrow A\) y \(\lim_{n \rightarrow \infty} A_{n} = A = \bigcap_{n=1}^{\infty} A_{n}\), con \(A_{n} \supset A_{n+1}\). Es decir, la sucesión es decreciente.</p>
+
+    <p>Se debe demostrar que \((A_{n} - A) \downarrow 0\), es decir, que \((A_{n} - A) \supset (A_{n+1} - A)\) y que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\).</p>
+
+    <h2>1) Demostrar que \((A_{n} - A) \supset (A_{n+1} - A)\)</h2>
+
+    <p>Sea \(X \in (A_{n+1} - A)\), entonces \(X \in A_{n+1}\) y \(X \notin A\). Como \(A_{n} \supset A_{n+1}\), también se tiene que \(X \in A_{n}\), y dado que \(X \notin A\), se concluye que \(X \in (A_{n} - A)\). Por lo tanto, \((A_{n} - A) \supset (A_{n+1} - A)\).</p>
+
+    <h2>2) Demostrar que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\)</h2>
+
+    <p>Sea \(X \in \bigcap_{n=1}^{\infty} (A_{n} - A)\), entonces \(X \in (A_{n} - A)\) para todo \(n \in \mathbb{N}\). Por lo tanto, \(X \in A_{n}\) para todo \(n \in \mathbb{N}\), pero también \(X \notin A\), lo cual es un absurdo porque \(A = \bigcap_{n=1}^{\infty} A_{n}\). Así, se concluye que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\).</p>
+
+    <p>Como \((A_{n} - A) \downarrow 0\), por el axioma de continuidad de la probabilidad (Axioma 4) se tiene que \(P(A_{n} - A) \rightarrow 0\) cuando \(n \rightarrow \infty\).</p>
+
+    <h2>Conclusión</h2>
+
+    <p>Por lo tanto, \(P(A_{n}) \rightarrow P(A)\) cuando \(n \rightarrow \infty\). Además, dado que \(P(A_{n} - A) = P(A_{n}) - P(A)\) por ser eventos disjuntos, se tiene que \(P(A_{n}) - P(A) \rightarrow 0\). Por lo tanto, \(P(A_{n}) \downarrow P(A)\) cuando \(n \rightarrow \infty\).</p>
+
+    <p>Así, queda demostrado que \(\lim_{n \rightarrow \infty} P(A_{n}) = P(A)\), lo que implica que si \(\{P(A_{n})\}_{n \in \mathbb{N}}\) es decreciente y \(P(A_{n}) - P(A) \rightarrow 0\), entonces \(P(A_{n}) \downarrow P(A)\).</p>
+
+        <h2 id="elementosimportantes">Elementos Importantes</h2>
+        <p>Los siguientes elementos \(\in F\):</p>
+
+    <p>\[
+    [X \leq x] = X^{-1}((-\infty, x]) = X \in (-\infty, x] = \{\omega \in \Omega : X(\omega) \in (-\infty, x]\}
+    \]</p>
     </div>
 </body>
 </html>
