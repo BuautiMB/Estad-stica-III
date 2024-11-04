@@ -4,7 +4,7 @@ output:
     toc: true # Activa el índice
     toc_float: true # Muestra el índice flotante
     css: styles.css
-    self_contained: true
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
