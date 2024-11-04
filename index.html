@@ -19,14 +19,50 @@
             <ul>
                 <li><a href="#demostracion1">Demostración 1</a></li>
                 <li><a href="#demostracion2">Demostración 2</a></li>
+                <li><a href="#demostracion3">Demostración 3</a></li>
             </ul>
         </div>
 
         <h2 id="demostracion1">Demostración 1</h2>
-        <p>Contenido de la demostración 1.</p>
+        <p>
+            Sea \(X\) una variable definida sobre un espacio de probabilidad \((\Omega; F; P)\). Demostrar que la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+        </p>
+        <p>
+            En primera instancia se define el significado de probabilidad inducida por \(X\). La probabilidad inducida por \(X\) sobre un conjunto \(B\) es \(P_{X}(B) = P(X^{-1}(B))\), donde \(X^{-1}(B)\) es el conjunto de todos los elementos de \(\Omega\) que son mapeados en \(B\) por \(X\).
+        </p>
+        <p>
+            Se quiere demostrar que \(P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = \sum_{i=1}^{\infty} P_{X}(B_{i})\).
+            Utilizando la definición de probabilidad inducida por \(X\), se tiene que 
+            \(P_{X}\left(\bigcup_{i=1}^{\infty} B_{i}\right) = P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right)\).
+            Como los conjuntos \(B_{i}\) son disjuntos, entonces los conjuntos \(X^{-1}(B_{i})\) también lo son, porque \(X\) es una función.
+        </p>
+        <p>
+            Utilizando la propiedad de \(\sigma\)-aditividad de la medida de probabilidad \(P\), se concluye que
+            \(P\left(X^{-1}\left(\bigcup_{i=1}^{\infty} B_{i}\right)\right) = \sum_{i=1}^{\infty} P(X^{-1}(B_{i}))\).
+            Por lo tanto, la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
+        </p>
 
         <h2 id="demostracion2">Demostración 2</h2>
-        <p>Contenido de la demostración 2.</p>
+        <p>
+            Demostrar que la preimagen de los hiperrectángulos pertenece a \(F\).
+        </p>
+        <p>
+            Se definen los hiperrectángulos de dimensión k como el producto cartesiano finito de los intervalos de la forma \( (-\infty, X_k] \). La preimagen de un hiperrectángulo bajo la función \(X\) es el conjunto de todos los elementos de \(\Omega\) tales que \(X(\omega)\) está en el hiperrectángulo.
+        </p>
+        <p>
+            Como cada conjunto de la forma \( [X_i \leq x_i] \in F \) (porque \(X_i\) es una variable aleatoria), la preimagen del hiperrectángulo es una intersección finita de conjuntos medibles, lo que prueba que la preimagen pertenece a \(F\).
+        </p>
+
+        <h2 id="demostracion3">Demostración 3</h2>
+        <p>
+            Sea \(\{A_{n}\}_{n \geq 1}\) una sucesión de eventos tal que: \(A_1 \subset A_2 \subset \dots \subset A_n\) y \(A = \bigcup_{n=1}^{\infty} A_{n}\).
+            Demostrar que: \(\lim_{n \to \infty} P(A_{n}) = P(A)\), es decir, la continuidad de la probabilidad en sucesiones monótonas expansivas.
+        </p>
+        <p>
+            Por la propiedad de continuidad monótona de la medida de probabilidad, se tiene que para una sucesión creciente de eventos \(A_n\), 
+            \(P\left( \bigcup_{n=1}^{\infty} A_n \right) = \lim_{n \to \infty} P(A_n)\). 
+            Esto prueba la continuidad de la probabilidad.
+        </p>
     </div>
 </body>
 </html>
