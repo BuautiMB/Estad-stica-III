@@ -153,7 +153,7 @@
         P\left(\bigcup_{i=1}^{n} A_{i}\right) \leq \sum_{i=1}^{n} P(A_{i}).
         \]
     </p>
-    <h2>1) Caso base: n = 2</h2>
+    <p>1) Caso base: n = 2</p>
     <p>
         Comencemos con \(n=2\), el menor número de conjuntos que se pueden unir:
         \[
@@ -188,7 +188,7 @@
         \]
         completando el caso base.
     </p>
-    <h2>2) Caso inductivo</h2>
+    <p>2) Caso inductivo</p>
     <p>
         Supongamos que la propiedad se cumple para \(n = k\), es decir:
         \[
@@ -223,14 +223,14 @@
 
     <p>Sea \((\Omega, F, P)\) un espacio de probabilidad. El teorema de la probabilidad compuesta establece:</p>
 
-    <h2>i) Para dos conjuntos \(A\) y \(B\) en \(F\):</h2>
+    <p>i) Para dos conjuntos \(A\) y \(B\) en \(F\):</p>
     <p>
         \[
         P(A \cap B) = P(A) \cdot P(B|A) = P(B) \cdot P(A|B) \quad \forall A, B \in F
         \]
     </p>
 
-    <h2>ii) Para una secuencia de conjuntos \(A_1, A_2, \dots, A_n \in F\):</h2>
+    <p>ii) Para una secuencia de conjuntos \(A_1, A_2, \dots, A_n \in F\):</p>
     <p>
         \[
         P\left( \bigcap_{i=1}^{n} A_i \right) = \prod_{i=1}^{n} P\left( A_i \middle| \bigcap_{k=1}^{i-1} A_k \right)
@@ -238,9 +238,9 @@
         \]
     </p>
 
-    <h2>Demostración por inducción</h2>
+     <p>Demostración por inducción </p>
 
-    <h3>1) Caso base: \(n = 2\)</h3>
+    <p>1) Caso base: \(n = 2\) </p>
     <p>
         El menor número de conjuntos que se pueden intersectar es 2. Sea \(A = A_1\) y \(B = A_2\), entonces tenemos que:
         \[
@@ -252,7 +252,7 @@
         \]
     </p>
 
-    <h3>2) Caso inductivo: \(n = k+1\)</h3>
+     <p>2) Caso inductivo: \(n = k+1\)</p>
 
     <p>
         \textbf{Hipótesis inductiva (HI):} Supongamos que se cumple para \(n = k\):
@@ -303,17 +303,17 @@
 
     <p>Se debe demostrar que \((A_{n} - A) \downarrow 0\), es decir, que \((A_{n} - A) \supset (A_{n+1} - A)\) y que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\).</p>
 
-    <h2>1) Demostrar que \((A_{n} - A) \supset (A_{n+1} - A)\)</h2>
+    <p>1) Demostrar que \((A_{n} - A) \supset (A_{n+1} - A)\)</p>
 
     <p>Sea \(X \in (A_{n+1} - A)\), entonces \(X \in A_{n+1}\) y \(X \notin A\). Como \(A_{n} \supset A_{n+1}\), también se tiene que \(X \in A_{n}\), y dado que \(X \notin A\), se concluye que \(X \in (A_{n} - A)\). Por lo tanto, \((A_{n} - A) \supset (A_{n+1} - A)\).</p>
 
-    <h2>2) Demostrar que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\)</h2>
+    <p>2) Demostrar que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\)</p>
 
     <p>Sea \(X \in \bigcap_{n=1}^{\infty} (A_{n} - A)\), entonces \(X \in (A_{n} - A)\) para todo \(n \in \mathbb{N}\). Por lo tanto, \(X \in A_{n}\) para todo \(n \in \mathbb{N}\), pero también \(X \notin A\), lo cual es un absurdo porque \(A = \bigcap_{n=1}^{\infty} A_{n}\). Así, se concluye que \(\bigcap_{n=1}^{\infty} (A_{n} - A) = \emptyset\).</p>
 
     <p>Como \((A_{n} - A) \downarrow 0\), por el axioma de continuidad de la probabilidad (Axioma 4) se tiene que \(P(A_{n} - A) \rightarrow 0\) cuando \(n \rightarrow \infty\).</p>
 
-    <h2>Conclusión</h2>
+    <p>Conclusión</p>
 
     <p>Por lo tanto, \(P(A_{n}) \rightarrow P(A)\) cuando \(n \rightarrow \infty\). Además, dado que \(P(A_{n} - A) = P(A_{n}) - P(A)\) por ser eventos disjuntos, se tiene que \(P(A_{n}) - P(A) \rightarrow 0\). Por lo tanto, \(P(A_{n}) \downarrow P(A)\) cuando \(n \rightarrow \infty\).</p>
 
