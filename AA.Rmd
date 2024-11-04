@@ -26,9 +26,7 @@ A continuación se enuncian las demostraciones más probables para el final de l
 ## Índice
 
 - [Demostración 1](#demostración-1)  <!-- Enlace a la sección -->
-- [Demostración 3](#demostración-3) 
-- [Demostración 4](#demostración-4) 
-- [Elementos importantes](#Elementos importantes) 
+- [Demostración 2](#demostración-2) 
 
 ## Demostración 1 {#demostración-1} 
 
@@ -64,151 +62,58 @@ $$
 
 Por lo tanto, la probabilidad inducida por \(X\) verifica el axioma de \(\sigma\)-aditividad.
 
+## Demostración 2 {#demostración-2}
+
+Demostrar que la preimagen de los hiperrectángulos pertenece a $F$.
+
+En primera instancia, se definen los hiperrectángulos de dimensión k como el producto cartesiano finito de los intervalos de la forma $(-\infty, X_k]$:
+
+\[
+X^{-1}\left( (-\infty, X_1] \times (-\infty, X_2] \times \dots \times (-\infty, X_k] \right) \in F
+\]
+
+\[
+\left[ X^{-1}\left( \times_{i=1}^{k} (-\infty, X_i] \right) \right] \in F \quad \forall (X_1, \dots, X_k)
+\]
+
+\[
+\updownarrow
+\]
+
+\[
+[X \in \times_{i=1}^{k} (-\infty, X_i]]
+\]
+
+\[
+\updownarrow
+\]
+
+\[
+[X_1 \leq x_1, X_2 \leq x_2, \dots, X_k \leq x_k] = \{\omega \in \Omega : X_1(\omega) \leq x_1, \dots, X_k(\omega) \leq x_k\}
+\]
+
+De esta manera se satisfacen k restricciones:
+
+\[
+= \bigcap_{i=1}^{k} \{\omega \in \Omega : X_i(\omega) \leq x_i\}
+\]
+
+\[
+= \bigcap_{i=1}^{k} [X_i \leq x_i]
+\]
+
+De lo anterior se sabe que $[X_i \leq x_i] \in F$ porque cada $X_i$ es una variable aleatoria.
+
+Entonces, es posible afirmar que:
+
+\[
+= \bigcap_{i=1}^{k} [X_i \leq x_i] \in F
+\]
+
+que es lo que se quería demostrar.
+
 ## Demostración 3 {#demostración-3}
 
-Demostrar subaditividad finita, es decir que 
+Sea $\{A_{n}\}_{n \geq 1}$ una sucesión de eventos tal que: $A_1 \subset A_2 \subset \dots \subset A_n$ y $A = \bigcup_{n=1}^{\infty} A_{n}$. 
 
-$$
-P\left(\bigcup_{i=1}^{n} A_{i}\right) \leq \sum_{i=1}^{n} P(A_{i}).
-$$
-
-Sea \( A_{i} \) un conjunto que pertenece a \( F \), se demostrará por inducción que 
-
-$$
-P\left(\bigcup_{i=1}^{n} A_{i}\right) \leq \sum_{i=1}^{n} P(A_{i}).
-$$
-
-1. **Caso base**: \( n=2 \) (por ser el menor número de conjuntos que se pueden unir).
-
-   $$ 
-   P(A_{1} \cup A_{2}) \leq P(A_{1}) + P(A_{2}) 
-   $$
-
-   Se cumple que: 
-   $$ 
-   A_{1} \cup A_{2} = (A_{1} - A_{2}) \cup (A_{1} \cap A_{2}) \cup (A_{2} - A_{1}) 
-   $$
-
-   Como la unión es disjunta y por axioma 3 de medida de probabilidad, es posible tomarle probabilidad a lo anterior:
-
-   $$
-   P(A_{1} \cup A_{2}) = P(A_{1} - A_{2}) + P(A_{1} \cap A_{2}) + P(A_{2} - A_{1})
-   $$
-
-   Como \( A_{1} - A_{2} = A_{1} - (A_{1} \cap A_{2}) \) y \( A_{2} - A_{1} = A_{2} - (A_{1} \cap A_{2}) \).
-
-   Entonces 
-
-   $$
-   P(A_{1} \cup A_{2}) = P\left[A_{1} - (A_{1} \cap A_{2})\right] + P(A_{1} \cap A_{2}) + P\left[A_{2} - (A_{1} \cap A_{2})\right]
-   $$
-
-   Como la intersección está contenida en cada una de las diferencias, la probabilidad de la diferencia es igual a la diferencia de las probabilidades, por ende:
-
-   $$
-   P(A_{1} \cup A_{2}) = P(A_{1}) - P(A_{1} \cap A_{2}) + P(A_{1} \cap A_{2}) + P(A_{2}) - P(A_{1} \cap A_{2}) 
-   $$
-
-   $$ 
-   P(A_{1} \cup A_{2}) = P(A_{1}) + P(A_{2}) - P(A_{1} \cap A_{2}) 
-   $$
-
-   Así se da que 
-
-   $$
-   P(A_{1} \cup A_{2}) \leq P(A_{1}) + P(A_{2}) 
-   $$
-
-2. **Caso inductivo**: A través de la hipótesis inductiva se supone que se cumple para \( n=k \), por lo tanto se debe demostrar que se cumpla para \( n=k+1 \).
-
-   HI) \( P\left(\bigcup_{i=1}^{k} A_{i}\right) \leq \sum_{i=1}^{k} P(A_{i}) \) (se supone cierto para \( n=k \))  
-   
-   TI) \( P\left(\bigcup_{i=1}^{k+1} A_{i}\right) \leq \sum_{i=1}^{k+1} P(A_{i}) \) (se demuestra para \( n=k+1 \))
-
-   $$
-   P\left(\bigcup_{i=1}^{k+1} A_{i}\right) = P\left(\left(\bigcup_{i=1}^{k} A_{i}\right) \cup A_{k+1}\right)
-   $$
-
-   $$
-   P\left(\bigcup_{i=1}^{k+1} A_{i}\right) \leq P\left(\bigcup_{i=1}^{k} A_{i}\right) + P(A_{k+1}) \leq \sum_{i=1}^{k} P(A_{i}) + P(A_{k+1}) = \sum_{i=1}^{k+1} P(A_{i}) 
-   $$
-
-   De esta manera queda demostrado que:
-
-   $$
-   P\left(\bigcup_{i=1}^{k+1} A_{i}\right) \leq \sum_{i=1}^{k+1} P(A_{i})
-   $$
-
-## Demostración 4 {#demostración-4}
-
-Demostrar el teorema de la probabilidad compuesta. El mismo enuncia que sea \( (\Omega, F,P) \) un espacio de probabilidad, entonces:
-
-i) 
-$$ 
-P(A \cap B) = P(A) \cdot P(B|A) = P(B) \cdot P(A|B) \quad \forall A,B \in F 
-$$ 
-
-ii) 
-$$ 
-P\left(\bigcap_{i=1}^{n} A_{i}\right) = \prod_{i=1}^{n} P(A_{i}| \bigcap_{k=1}^{i-1} A_{k}) \quad \forall A_{1},...,A_{n} \in F 
-$$ 
-
-Se realiza la demostración vía inducción matemática.
-
-1. **Caso base**: \( n=2 \) por ser el menor número de conjuntos que se pueden intersecar.
-
-   Siendo \( A=A_{1} \) y \( B=A_{2} \), se tiene que:
-
-   $$ 
-   P(A \cap B) = P(A) \cdot P(B|A) 
-   $$
-
-   $$ 
-   \updownarrow 
-   $$
-
-   $$ 
-   P(A_{1}\cap A_{2}) = P(A_{1}) \cdot P(A_{2}|A_{1}) 
-   $$
-
-2. **Caso inductivo**: \( n=k+1 \)
-
-   HI) 
-   $$ 
-   P\left(\bigcap_{i=1}^{k} A_{i}\right) = \prod_{i=1}^{k} P(A_{i}|\bigcap_{j=1}^{i-1} A_{j}) 
-   $$ 
-   (se supone cierto para un \( n=k \))
-
-   TI) 
-   $$ 
-   P\left(\bigcap_{i=1}^{k+1} A_{i}\right) = \prod_{i=1}^{k+1} P(A_{i}|\bigcap_{j=1}^{i-1} A_{j}) 
-   $$ 
-   (se demuestra para un \( n=k+1 \))
-
-   $$ 
-   P\left(\bigcap_{i=1}^{k+1} A_{i}\right) = P\left(\bigcap_{i=1}^{k} A_{i} \cap A_{k+1}\right) 
-   $$
-
-   Pero por caso base se tiene que 
-
-   $$
-   P\left(\bigcap_{i=1}^{k+1} A_{i}\right) = P\left(\bigcap_{i=1}^{k} A_{i} \cap A_{k+1}\right) = P\left(\bigcap_{i=1}^{k} A_{i}\right) \cdot P(A_{k+1} | \bigcap_{i=1}^{k} A_{i}) 
-   $$
-
-   $$
-   = \prod_{i=1}^{k} P(A_{i} | \bigcap_{j=1}^{i-1} A_{j}) \cdot P(A_{k+1} | \bigcap_{i=1}^{k} A_{i}) = \prod_{i=1}^{k+1} P(A_{i} | \bigcap_{j=1}^{i-1} A_{j}) 
-   $$
-
-   Así queda demostrado que 
-
-   $$
-   P\left(\bigcap_{i=1}^{k+1} A_{i}\right) = \prod_{i=1}^{k+1} P(A_{i} | \bigcap_{j=1}^{i-1} A_{j}) 
-   $$
-
-## Elementos importantes {#Elementos importantes}
-
-Los siguientes elementos \( \in F \): 
-
-$$
-[X \leq x] = X^{-1}(-\infty, x] = X \in (-\infty, x] = \{\omega \in \Omega: X(\omega) \in (-\infty, x]\}
-$$
+Demostrar que: $\lim_{n \to \infty} P(A_{n}) = P(A)$. (Es decir, demostrar la continuidad de la probabilidad en sucesiones monótonas expansivas).
