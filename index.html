@@ -31,6 +31,7 @@
                 <li><a href="#demostracion4">Demostración 4</a></li>
                 <li><a href="#demostracion5">Demostración 5</a></li>
                 <li><a href="#demostracion6">Demostración 6</a></li>
+                <li><a href="#demostracion7">Demostración 7</a></li>
                 <li><a href="#elementosimportantes">Elementos Importantes</a></li>
             </ul>
         </div>
@@ -321,10 +322,17 @@
     <p>Así, queda demostrado que \(\lim_{n \rightarrow \infty} P(A_{n}) = P(A)\), lo que implica que si \(\{P(A_{n})\}_{n \in \mathbb{N}}\) es decreciente y \(P(A_{n}) - P(A) \rightarrow 0\), entonces \(P(A_{n}) \downarrow P(A)\).</p>
        
         <h2 id="demostracion6">Demostración 6</h2>
+        
+    <p>Demostración de Continuidad en el Vacío</p>
+    <p>Sea una secuencia \(\{A_{n}\}_{n \geq 1}\) que decrece hacia el vacío (\(A_{n} \downarrow \emptyset\)) tal que \(A_{n} \supset A_{n+1}\) y que \(\bigcap_{n \geq 1} A_{n} = \emptyset\), por lo que se quiere probar que \(P(A_{n}) \rightarrow 0\) cuando \(n \rightarrow \infty\).</p>
 
+    <p>Debido a que la medida de probabilidad es una función continua, se cumple que \(\lim_{n \rightarrow \infty} P(A_{n}) = P(\lim_{n \rightarrow \infty} A_{n})\) y dado que se cumple que \(\lim_{n \rightarrow \infty} A_{n} = \emptyset\), se tiene que:</p>
 
+    <p>\[
+    \lim_{n \rightarrow \infty} P(A_{n}) = P(\lim_{n \rightarrow \infty} A_{n}) = P( \bigcap_{n = 1}^{\infty} A_{n}) = P(\emptyset)=0
+    \]</p>
 
-
+    <h2 id="demostracion7">Demostración 7</h2>
         
         <h2 id="elementosimportantes">Elementos Importantes</h2>
         <p>Los siguientes elementos \(\in F\):</p>
